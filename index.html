@@ -1518,31 +1518,44 @@
                 <div class="container">
                   <div class="rsvp">
                     <div class="rsvp-form white-box wow fadeInUp col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12" data-class="fadeInUp">
-                      <p> If you received an invitation, we’d like to plan in advance. Kindly reply, for any question please fill the form by <br>
-                        <span>17 Nov 2016</span> </p>
-                      <div id="Success" class="successalert" style=" display:none;"> <strong>Thank you</strong>. </div>
-                      <div id="Error" class="errorelert" style="display:none;"> <strong>Error occurred while sending email.</strong> Try again later. </div>
-                      <form class="form floating-label text-left form-validate" name="frm" id="frm">
+                      <p> Nếu bạn nhận được lời mời, chúng tôi muốn lên kế hoạch trước. Vui lòng trả lời, nếu có thắc mắc vui lòng điền vào biểu mẫu bằng cách <br>
+                        <span>00 Nov 2024</span> </p>
+                      <form action="" method="post" class="form floating-label text-left form-validate" name="frm" id="frm">
+                        <div id="Success" class="successalert" style=" display:none;"> <strong>Thank you</strong>. </div>
+                        <div id="Error" class="errorelert" style="display:none;"> <strong>Error occurred while sending email.</strong> Try again later. </div>
+                        <div class="message_Oj"></div>
                         <div class="form-group">
-                          <input type="text" class="form-control" id="Name" name="Name" required data-rule-minlength="2" />
-                          <label for="Name">Name</label>
+                          <input type="text" class="form-control" id="Name" name="Name"   data-rule-minlength="2" />
+                          <label for="Name">Họ và tên (Quan khách)</label>
+                          <span style="color: #f44336;" class="required"></span>
+                        </div> 
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="Contactnumber" name="Contactnumber" data-rule-number="true" />
+                          <label for="Contactnumber">Số điện thoại (Quan khách)</label>
+                          <span style="color: #f44336;" class="required"></span>
                         </div>
                         <div class="form-group">
-                          <input type="text" class="form-control" id="Contactnumber" name="Contactnumber" data-rule-number="true" required />
-                          <label for="Contactnumber">Contact Number</label>
+                          <input type="email" class="form-control" id="Emailaddress" name="Emailaddress" />
+                          <label for="Emailaddress">Địa chỉ Email (Nhận Quà cưới)</label>
+                          <span style="color: #f44336;" class="required"></span>
                         </div>
                         <div class="form-group">
-                          <input type="email" class="form-control" id="Emailaddress" name="Emailaddress" required />
-                          <label for="Emailaddress">Email Address</label>
+                          <input type="text" class="form-control" id="attendiesDetails" name="attendiesDetails"/>
+                          <label for="Emailaddress">Tham dự tiệc (Đi Hoặc không đi được)</label>
+                          <span style="color: #f44336;" class="required"></span>
                         </div>
-                        <div class="row">
+                        <div class="form-group">
+                          <input type="text" class="form-control" id="guestDetails" name="guestDetails" />
+                          <label for="guestDetails">Đi cùng ai (một mình - Người yêu - Bạn bè - gia đình)</label>
+                          <span style="color: #f44336;" class="required"></span>
+                        </div>
+                        <!-- <div class="row">
                           <div class="col-md-6">
                             <div class="form-group">
                               <select id="attendiesDetails" name="attendiesDetails" class="form-control select2-list dirty" required>
                                 <option value="">Select Presense</option>
                                 <option value='0'>Yes</option>
                                 <option value='1'>No</option>
-                                <option value='2'>Not Sure</option>
                               </select>
                               <label for="attendiesDetails">I am attending?</label>
                             </div>
@@ -1553,20 +1566,20 @@
                                 <option value="">Select Attendee(s)</option>
                                 <option value='0'>0</option>
                                 <option value='1'>1</option>
-                                <option value='2'>2</option>
-                                <option value='3'>3</option>
                               </select>
                               <label for="guestDetails">Guests</label>
                             </div>
                           </div>
                         </div>
+                        -->
                         <div class="form-group">
                           <textarea class="form-control" id="message" name="message"></textarea>
-                          <label>Drop line to </label>
-                        </div>
+                          <label>Gửi lời chúc đến Cô dâu chú rễ </label>
+                          <span style="color: #f44336;" class="required"></span>
+                        </div> 
                         <div class="rsvp-button text-center">
-                          <button type="submit" class="hvr-sweep-to-right">Submit</button>
-                          <div id="loding" style="display:none; padding-left:20px;"><img src="images/ajax-loader.gif" alt="Loader"></div>
+                          <button id="submit" class="hvr-sweep-to-right">Gửi</button>
+                          <!-- <div id="loding" style="display:none; padding-left:20px;"><img src="images/ajax-loader.gif" alt="Loader"></div> -->
                         </div>
                       </form>
                     </div>
@@ -1710,7 +1723,7 @@
                         <span class="label label-default">05 May 2016</span> </div>
                       <div class="timeline-body">
                         <div class="embed-responsive embed-responsive-4by3 tour-video">
-                          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KRY0Z9CAZdk"></iframe>
+                          <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/KRY0Z9CAZdk"></iframe> -->
                         </div>
                       </div>
                     </div>
@@ -2048,6 +2061,7 @@
 <script type="text/javascript" src="js/wow.js"></script> 
 <script type="text/javascript" src="js/jquery.validate.min.js"></script> 
 <script type="text/javascript" src="js/formValidation.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
 </body>
 
 <!-- Mirrored from lithemes.com/lovebirds/vertical-menu/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 15 May 2018 09:58:41 GMT -->
